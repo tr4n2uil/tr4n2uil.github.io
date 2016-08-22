@@ -22,16 +22,21 @@ var APP = angular.module('APP', ['ngRoute', 'ngSanitize', 'chieffancypants.loadi
 		$scope.headerURL = 'ui/tpl/header.html';
 		$scope.footerURL = 'ui/tpl/footer.html';
 
-		$scope.menu = [ 'home', 'labs', 'hire', 'about' ];
+		$scope.menu = [ 'home', 'labs', 'hire', 'about', 'resume' ];
 		$scope.menu_urls = {
 			home: '',
 			labs: 'labs',
 			hire: 'hire',
 			about: 'about',
+			resume: 'resume',
 		};
 
 		$rootScope.page = 'home';
 		$scope.pageURL = 'ui/tpl/home.html';
+
+		var d = new Date();
+		d.setDate(d.getDate() - 2);
+		$rootScope.lastUpdated = d.toDateString();
 	}]);
 
 
@@ -45,4 +50,14 @@ $( document ).ready( function(){
 	ga('create', 'UA-47160625-1', 'vibhaj.com');
 	ga('send', 'pageview');
 
+	window.addEventListener('scroll', function(e){
+    var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+      shrinkOn = 25,
+      header = $(".header");
+    if (distanceY > shrinkOn) {
+      header.addClass("smaller");
+    } else if (header.hasClass("smaller")) {
+      header.removeClass("smaller");
+    }
+  });
 });
