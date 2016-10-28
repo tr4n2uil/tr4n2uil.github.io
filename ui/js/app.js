@@ -22,7 +22,7 @@ var APP = angular.module('APP', ['ngRoute', 'ngSanitize', 'chieffancypants.loadi
 		$scope.headerURL = 'ui/tpl/header.html';
 		$scope.footerURL = 'ui/tpl/footer.html';
 
-		$scope.menu = [ 'home', 'labs', 'hire', 'about', 'resume' ];
+		$scope.menu = [ 'home', 'labs', 'about', 'resume' ];
 		$scope.menu_urls = {
 			home: '',
 			labs: 'labs',
