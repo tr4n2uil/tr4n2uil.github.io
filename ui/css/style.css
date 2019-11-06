@@ -3,7 +3,7 @@
  *
  *	Vibhaj Rajan <vibhaj8@gmail.com>
  *
- *	Licensed under MIT License 
+ *	Licensed under MIT License
  *	http://www.opensource.org/licenses/mit-license.php
  *
 **/
@@ -12,7 +12,7 @@
  *
  *	Vibhaj Rajan <vibhaj8@gmail.com>
  *
- *	Licensed under MIT License 
+ *	Licensed under MIT License
  *	http://www.opensource.org/licenses/mit-license.php
  *
 **/
@@ -61,7 +61,7 @@ body {
  *
  *	Vibhaj Rajan <vibhaj8@gmail.com>
  *
- *	Licensed under MIT License 
+ *	Licensed under MIT License
  *	http://www.opensource.org/licenses/mit-license.php
  *
 **/
@@ -1114,6 +1114,24 @@ body {
   input,
   button {
     font-size: 36px;
+  }
+}
+@media all and (min-width: 1460px) and (min-aspect-ratio: 4/3) {
+  .body {
+    width: 55%;
+    margin: auto;
+  }
+  body,
+  input,
+  button {
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 1460px) and (max-aspect-ratio: 4/3) {
+  body,
+  input,
+  button {
+    font-size: 38px;
   }
 }
 ::-webkit-scrollbar {
